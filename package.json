@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify js/app.jsx -o build/bundle.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/lmcnern/RctTutorial.git"
   },
-  "author": "",
+  "author": "Lauren McNerney",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lmcnern/RctTutorial/issues"
@@ -20,5 +21,9 @@
     "react": "^0.13.3",
     "reactify": "^1.1.1"
   },
-  "description": ""
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
 }
